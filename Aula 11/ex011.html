@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulado</title>
+</head>
+<body>
+    <h1>Sistema de gerenciamento de imigrantes</h1>
+    Por favor, digite seu país de origem: <input type="string" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar() {
+            var txtp = document.getElementById('pais')
+            var res = document.getElementById('res')
+            var country = String(txtp.value)
+            res.innerHTML = `<p>Seu país de origem é: <strong>${country}</strong></p>`
+            if (country != 'Brasil') {
+                res.innerHTML += `<p>Você é estrangeiro. Por favor se dirija a mesa 10!</p>`
+            } else {
+                res.innerHTML += `<p>Você é Brasileiro! Pode passar!</p>`
+            }
+            res.innerHTML += '<p>Tenha um ótimo dia!</p>'
+        }
+    </script>
+</body>
+</html>
