@@ -7,4 +7,4 @@ function parimp(n) {
 }
 
 let res = parimp(4)
-console.log(res)
+console.log(res) 
